@@ -14,6 +14,12 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    maven { url "https://maven.ryanliptak.com/" }
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
 }
 
 base {
@@ -82,6 +88,8 @@ obfuscation {
 }
 
 dependencies {
+    modLocalRuntime "mezz.jei:jei-1.20.1-forge:15.20.0.112"
+    modLocalRuntime "squeek.appleskin:appleskin-forge:mc1.20.1-2.5.1"
 }
 
 // Uncomment the lines below if you wish to configure mixin. The mixin file should be named modid.mixins.json.
